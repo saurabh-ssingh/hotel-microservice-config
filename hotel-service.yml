@@ -1,3 +1,4 @@
+# hotel-service.yml in GitHub repo
 server:
   port: 8082
 
@@ -7,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/hotel_management
     username: root
-    password: Saurabh*789
+    password: ${ssm:/config/hotel-service/datasource/password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -17,6 +18,8 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
+  config:
+    import: "optional:aws-parameterstore:"
 
 eureka:
   client:
