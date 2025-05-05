@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/hotel_management
     username: root
-    password: ${ssm:/config/hotel-service/datasource/password}
+    password: ${spring.datasource.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
