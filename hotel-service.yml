@@ -42,3 +42,8 @@ otel:
   traces:
     sampler:
       ratio: 1.0
+# In hotel-service's application.yml
+logging:
+  level:
+    io.awspring.cloud: DEBUG
+    org.springframework.cloud: DEBUG
