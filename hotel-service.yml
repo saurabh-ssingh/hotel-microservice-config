@@ -18,8 +18,8 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQL8Dialect
-  # config:
-  #   import: "optional:configserver:,aws-parameterstore:"
+   config:
+     import: "optional:aws-parameterstore:"
 
 eureka:
   client:
